@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col s4" *ngFor="let product of products">
-       <a [routerLink] = "['/product']" [queryParams] = "{id : product.id}">
+       <a [routerLink] = "['/product',product.id]">
         <div class="card">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src={{product.image}}>
