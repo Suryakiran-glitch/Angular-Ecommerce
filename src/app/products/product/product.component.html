@@ -17,15 +17,16 @@
       </div>
       <div class="divider"></div>
       <div class="quantity">
-        <button class="btn waves-effect waves-light btn">+</button>
+        <button class="btn waves-effect waves-light btn" (click)="increaseQuantity()">+</button>
         <div class="input-field">
-          <input  id="first_name" name="quantity" type="text" class="validate" />
+          <input style="text-align: center;"  id="first_name" name="quantity" type="text" class="validate" value={{quantity}} />
         </div>
-        <button class="btn waves-effect waves-light btn">-</button>
+        <button class="btn waves-effect waves-light btn" (click)="decreaseQuantity()">-</button>
       </div>
       <div class="price">price : &#8360; {{p.price}} </div>
+      <div class="price">Total price : &#8360; {{calcTotal()}} </div>
       <div class="submit">
-        <button class="waves-effect waves-light btn">Add to cart</button>
+        <button class="waves-effect waves-light btn" (click)="addToCart()">Add to cart</button>
       </div>
     </div>
   </div>

@@ -1,7 +1,9 @@
+import { CartModule } from './cart/cart.module';
 import { ProductsModule } from './products/products.module';
 import { AppLayoutModule } from './app-layout/app-layout.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {CookieService} from 'ngx-cookie-service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,9 +26,10 @@ import {MatGridListModule} from '@angular/material/grid-list'
     ProductsModule,
     MatCardModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    CartModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

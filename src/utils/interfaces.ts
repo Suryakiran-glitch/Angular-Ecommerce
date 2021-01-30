@@ -6,3 +6,7 @@ export interface product {
   category: string;
   image: string;
 }
+
+export interface simeplChanges {
+  quantity: number;
+}

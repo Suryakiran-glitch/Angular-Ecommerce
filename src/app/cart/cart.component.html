@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col s10 offset-6">
+      <h2 class="title">Add to Carts</h2>
+      <div class="table">
+        <table class="striped" *ngFor="let c of cart">
+          <thead>
+            <tr>
+                <th>id</th>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Total Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>{{c.id}}</td>
+              <td><img style="width: 25px;height: 30px;" src={{c.image}} alt="photo" class="image-fluid"/></td>
+              <td>{{c.title}}</td>
+              <td>{{totalPrice}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 offset-8">
+        <button class="btn waves-effect waves-ripple red lighten-2">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
