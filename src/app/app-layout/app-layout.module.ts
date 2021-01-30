@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeroComponent } from './hero/hero.component';
+import {RouterModule} from '@angular/router'
 
 
 
@@ -10,6 +11,7 @@ import { HeroComponent } from './hero/hero.component';
   declarations: [HeaderComponent, FooterComponent, HeroComponent],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports : [
     HeaderComponent,

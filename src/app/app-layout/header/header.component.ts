@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireAuth} from '@angular/fire/auth'
-import {ToastrService} from 'ngx-toastr'
+import {AngularFireAuth} from '@angular/fire/auth';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',

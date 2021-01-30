@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './checkout/checkout.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ const routes: Routes = [{ path: '', loadChildren: () => import('./products/produ
 {
   path : 'register',
   component : RegisterComponent
+},
+{
+  path : 'delivery',
+  component : CheckoutComponent
 }
 
 ];

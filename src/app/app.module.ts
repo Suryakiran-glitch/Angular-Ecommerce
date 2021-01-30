@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {CookieService} from 'ngx-cookie-service';
 import {ToastrModule} from 'ngx-toastr';
 import {firebaseConfig} from '../config';
+import {RouterModule} from '@angular/router';
 
 //Firebase
 import {AngularFireModule} from '@angular/fire';
@@ -19,13 +20,15 @@ import {HttpClientModule} from '@angular/common/http'
 //Angular Material Modules
 import {MatCardModule} from '@angular/material/card'
 import {MatGridListModule} from '@angular/material/grid-list';
-import { RegisterComponent } from './auth/register/register.component'
+import { RegisterComponent } from './auth/register/register.component';
+import { CheckoutComponent } from './checkout/checkout.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { RegisterComponent } from './auth/register/register.component'
     CartModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    RouterModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
