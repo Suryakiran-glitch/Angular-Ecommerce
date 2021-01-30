@@ -2,7 +2,8 @@ import { product , simeplChanges } from './../../../utils/interfaces';
 import { ProductsService } from './../../services/products.service';
 import { Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {CookieService} from 'ngx-cookie-service'
+import {CookieService} from 'ngx-cookie-service';
+import {Router} from '@angular/router'
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -19,7 +20,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private products: ProductsService,
-    private cookie: CookieService
+    private cookie: CookieService,
+    private router: Router
   ) {
   }
 
@@ -56,6 +58,7 @@ export class ProductComponent implements OnInit {
   addToCart(): void {
     this.cookie.set('id' , this.id.toString());
     this.cookie.set('totalPrice', this.totalPrice.toString());
+    this.router.navigateByUrl('/cart');
   }
 
 

@@ -31,6 +31,9 @@ speed-measure-plugin*.json
 !.vscode/extensions.json
 .history/*
 
+#firebase
+config.js
+
 # misc
 /.sass-cache
 /connect.lock

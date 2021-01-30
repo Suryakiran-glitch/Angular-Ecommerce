@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chat-demo-833aa": {
+      "hosting": {
+        "Ecommerce": [
+          "chat-demo-833aa"
+        ]
+      }
+    }
+  }
+}

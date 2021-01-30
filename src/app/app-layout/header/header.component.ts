@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularFireAuth} from '@angular/fire/auth'
+import {ToastrService} from 'ngx-toastr'
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auth: AngularFireAuth,
+    private toast: ToastrService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  logout(): void {
+    this.auth.signOut();
+    this.toast.success('Logout successful');
   }
 
 }

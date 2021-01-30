@@ -28,4 +28,9 @@ export class CartComponent implements OnInit {
     })
   }
 
+  checkOut(): void {
+    this.cookie.delete('id');
+    this.cookie.delete('totalPrice');
+  }
+
 }
